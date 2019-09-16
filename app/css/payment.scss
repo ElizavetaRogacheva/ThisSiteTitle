@@ -1,0 +1,265 @@
+.payment-section {
+    padding-top: rem(60px);
+
+    @include phones {
+        padding-top: rem(30px);
+    }
+}
+
+.payment-section__title {
+    font-size: rem(36px);
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: rem(30px);
+
+    &--mobile {
+        display: none;
+    }
+
+    @include phones {
+        display: block;
+        font-size: rem(21px);
+        margin-bottom: rem(20px);
+        &--desktop {
+            display: none;
+        }
+    }
+}
+
+.payment-section__list {
+    list-style: none;
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: rem(80px);
+
+    @include phones {
+        display: none;
+    }
+}
+
+.payment-section__item {
+    font-size: rem(18px);
+    line-height: rem(33px);
+
+    a {
+        color: $blue;
+
+        &:hover {
+            color: darken($blue, 20%);
+        }
+    }
+}
+
+.payment-block__duty-block--desktop {
+    @include phones {
+        display: none;
+    }
+}
+
+.payment-block__item--mobile {
+    display: none;
+
+    @include phones {
+        display: block;
+        border-bottom: rem(2px) solid #cedae4;
+    }
+}
+
+.payment-block__item{
+    border-bottom: rem(2px) solid #cedae4;    
+
+    &--fine {
+        background: url(../img/bg-1.jpg) 100% 0 no-repeat;
+
+        @include phones {
+            .payment-block__text {
+                &--pre-slogan {
+                    margin-bottom: rem(35px);
+                }
+            }
+        }
+    }
+
+    &--debt {
+        padding-top: rem(85px);
+        padding-left: 38%;
+        padding-bottom: rem(60px);
+        background: url(../img/bg-2.jpg) 0 rem(85px) no-repeat;
+
+        .payment-block__text {
+            &--pre-slogan {
+                margin-bottom: rem(65px);
+
+                @include phones {
+                    margin-bottom: rem(21px);
+                }
+            }
+        }
+    }
+
+    &--tax {
+        padding-top: rem(80px);
+        padding-bottom: rem(143px);
+        background: url(../img/bg-3.jpg) 100% rem(80px) no-repeat;
+
+    }
+
+    &--service {
+        padding-top: rem(76px);
+        padding-left: 38%;
+        padding-bottom: rem(150px);
+        background: url(../img/bg-4.jpg) 0 rem(76px) no-repeat;
+
+        .payment-block__text {
+            &--pre-slogan {
+                margin-bottom: rem(30px);
+
+                @include phones {
+                    margin-bottom: rem(21px);
+                }
+            }
+        }
+    }
+
+    @include phones {
+        padding: 0;
+        background: none;
+    }
+}
+
+.payment-block__duty-block--desktop {
+    padding-top: rem(55px);
+    padding-bottom: rem(70px);
+}
+
+.payment-title__link {
+    color: $blue;
+}
+
+.payment-block__title {
+    margin-bottom: rem(35px);
+
+    @include phones {
+        font-size: rem(18px);
+        color: $blue;
+        text-decoration: underline;   
+        font-weight: normal;
+        padding: rem(17px) 0 rem(17px) rem(55px);
+        cursor: pointer;
+        position: relative;
+        margin: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: rem(39px);
+            height: rem(38px);
+            top: rem(8px);
+            left: rem(10px);
+        }
+
+        &--fine {
+            &::before {
+                background: url(../img/mob-icon-1.png) center center no-repeat;
+            }
+        }
+
+        &--duty {
+            &::before {
+                background: url(../img/mob-icon-2.png) center center no-repeat;
+            }
+        }
+
+        &--debt {
+            &::before {
+                background: url(../img/mob-icon-3.png) center center no-repeat;
+            }
+        }
+
+        &--tax {
+            &::before {
+                background: url(../img/mob-icon-4.png) center center no-repeat;
+            }
+        }
+
+        &--service {
+            &::before {
+                background: url(../img/mob-icon-5.png) center center no-repeat;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: rem(9px);
+            height: rem(11px);
+            top: rem(21px);
+            right: rem(5px);
+            background: url(../img/arrow.png) center center no-repeat;
+        }
+     }
+}
+
+.payment-block__fine-block,
+.payment-block__tax-block {
+    p {
+        padding-right: 37%;
+    }
+
+    @include phones {
+        p {
+            padding: 0;
+        }
+    }
+}
+
+.payment-block__text {
+    font-size: rem(15px);
+    line-height: rem(21px);
+    margin-bottom: rem(10px);
+
+    &--pre-slogan {
+        margin-bottom: rem(32px);
+    }
+    
+    @include phones {
+        margin-bottom: rem(18px);
+    }
+}
+
+.payment-block__slogan {
+    text-transform: uppercase;
+    color: $red;
+    font-weight: normal;
+    font-size: rem(12px);
+    line-height: rem(15px);
+    margin-bottom: rem(14px);
+}
+
+.payment-block__fine-block,
+.payment-block__duty-block,
+.payment-block__debt-block,
+.payment-block__tax-block,
+.payment-block__service-block {
+    @include phones {
+        display: none;
+    }
+}
+
+.active-accordion {
+    @include phones {
+        &::after {
+            background: url(../img/arrow-top.png) center center no-repeat;
+        }
+
+    }
+}
+
+.active-accordion + div {
+    @include phones {
+        display: block;
+    }
+}

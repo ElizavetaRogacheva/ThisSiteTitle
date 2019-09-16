@@ -1,0 +1,135 @@
+.modal-login {
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    transform: translate(rem(-202px), rem(-237px));
+    width: rem(326px);
+    padding: rem(40px) rem(40px) rem(17px);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 12;
+
+    @include phones {
+        width: 60%;
+        top: 20%;
+        left: 15%;
+        transform: translate(0, 0);
+        padding: rem(20px) rem(21px) rem(5px);
+    }
+}
+
+.modal-login__title {
+    line-height: rem(20px);
+    font-size: rem(15px);
+    margin-bottom: rem(32px);
+}
+
+.modal-login__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(40px);
+}
+
+.modal-login__input {
+    height: rem(60px);
+    border: none;
+    box-shadow: -2px -2px 0 #bcc1c5;
+    margin-bottom: rem(20px);
+
+    &::placeholder {
+        font-size: rem(18px);
+        font-family: 'Myriad Pro' sans-serif;
+    }
+
+    @include phones {
+        height: rem(30px);
+    }
+}
+
+.modal-login__btn {
+    font-size: rem(20px);
+    color: #fff;
+    background-color: $red;
+    border: none;
+    display: block;
+    height: rem(60px);
+
+    &:hover {
+        background-color: darken($red, 5%);
+    }
+    @include phones {
+        height: rem(30px);
+    }
+
+}
+
+.modal-login__link {
+    color: $blue;
+    margin-bottom: rem(33px);
+
+    &:hover {
+        color: darken($blue, 20%);
+    }
+}
+
+.modal-login__close-btn {
+    position: absolute;
+    top: 0;
+    width: rem(22px);
+    height: rem(22px);
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    right: rem(-40px);
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: rem(31px);
+        height: rem(2px);
+        background-color: #fff;
+        top: rem(10px);
+        left: rem(-5px);
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+
+    }
+
+    @include phones {
+        top: rem(5px);
+        right: rem(5px);
+        width: rem(15px);
+        height: rem(15px);    
+
+        &::before,
+        &::after {
+            background-color: #000;
+            width: rem(21px);
+
+        }
+    }
+}
+
+.modal-overlay {
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.7);
+}
+
+.hidden {
+    display: none;
+}
+

@@ -1,0 +1,125 @@
+.main-footer {
+    background-color: #e6ecf1;
+    padding: rem(40px);
+
+    @include phones {
+        padding: rem(20px) 0;
+    }
+}
+
+.footer-container {
+    display: flex;
+    position: relative;
+
+    @include phones {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.footer__menu-list,
+.footer__contacts-block,
+.footer__copyright-img {
+    @include phones {
+        display: none;
+    }
+}
+
+.footer__secure-block {
+    position: absolute;
+    top: rem(110px);
+    left: 0;
+
+    @include phones {
+        position: static;
+        width: rem(80px);
+        margin: rem(20px) auto 0;
+    }
+}
+
+.footer__copyright-text {
+    font-size: rem(15px);
+    line-height: rem(21px);
+
+    @include phones {
+        width: 100%;
+        text-align: center;
+        font-size: rem(13px);
+    }
+}
+
+.footer-copyright {
+    width: 30.9%;
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+.footer__menu-list {
+    width: 20.7%;
+}
+
+.footer__menu-item {
+    margin-bottom: rem(12px);
+}
+
+.footer__menu-link {
+    line-height: rem(21px);
+    color: $blue;
+
+    &:hover {
+        color: darken($blue, 20%);
+    }
+}
+
+.footer__contacts-block {
+    width: 32.2%;
+    display: flex;
+    flex-direction: column;
+
+    @include phones {
+        display: none;
+    }
+}
+
+.contacts-phone__link {
+    font-size: rem(24px);
+    line-height: rem(28px);
+    color: $blue;
+
+    &:hover {
+        color: darken($blue, 20%);
+    }
+}
+
+.footer-contacts__note {
+    margin-bottom: rem(22px);
+}
+
+.footer-contacts__link {
+    color: $blue;
+    margin-bottom: rem(10px);
+
+    &:hover {
+        color: darken($blue, 20%);
+    }
+}
+
+.footer__copyright-block {
+    width: 16.2%;
+
+    p {
+        margin-bottom: rem(18px);
+    }
+    
+    @include phones {
+        width: 100%;
+    }
+}
+
+.footer__copyright-img {
+    margin-left: 100%;
+    transform: translateX(-98px);
+}

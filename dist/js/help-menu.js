@@ -1,0 +1,1 @@
+var helpBtn=document.querySelector(".help-block__btn"),headerMenu=document.querySelector(".main-header__menu-block");helpBtn.addEventListener("click",function(e){e.preventDefault(),helpBtn.classList.toggle("help-block__btn--close"),headerMenu.classList.toggle("menu-hidden")});
